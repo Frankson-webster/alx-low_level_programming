@@ -1,23 +1,27 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - is entry of program
  *
- * Return: Always 0 (Success)
+ * Return: 0, if succesful
  */
 int main(void)
 {
-        int num;
-  
-        for (num = 0; num < 10; num++)
-        {
-                putchar(num + '0');
+	/*
+	 * prints all single integers, with comma and space after
+	 * loops through 0-9, prints them,prints comma,print space,
+	 * use only putchar
+	 */
+	int x;
 
-                if (num < 9)
-                {
-                        putchar(',');
-                        putchar(' ');
-                }
-        }
-        putchar('\n');
-  return (0);
+	for (x = 0 ; x < 10 ; x++)
+	{
+		putchar((x % 10) + '0');
+		if (x == 9)
+		/*continue printing comma and space except if x == 9*/
+			continue;
+		putchar(',');
+		putchar(' ');
+	}
+	putchar('\n');
+	return (0);
 }
