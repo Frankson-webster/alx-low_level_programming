@@ -16,9 +16,9 @@ void print_to_98(int n)
 
 	if (n > 98)
 		for (webster = n; webster > 98; --webster)
-			printf("%d,", webster);
+			printf("%d ,", webster);
 	else
 		for (webster = n; webster < 98; ++webster)
-			printf("%d,", webster);
+			printf("%d, ", webster);
 	printf("98\n");
 }
